@@ -1,15 +1,15 @@
 import React from 'react'
-import { Link} from "react-router-dom";
-import styled from 'styled-components';
+import { NavLink} from "react-router-dom";
+// import styled from 'styled-components';
 
-// const Container = styled.div`
-// display:flex;
-// `
+// // const Container = styled.div`
+// // display:flex;
+// // `
 function NavBar() {
     return (
-        <div>
-            <Link to="/">Home</Link>
-            <Link to="/about">About</Link>
+        <div className="header">
+            <NavLink to="/" exact activeStyle={{fontWeight:"bold",color:"red"}}>Home</NavLink>
+            <NavLink to="/about" exact activeStyle={{fontWeight:"bold",color:"red"}}>About</NavLink>
         </div>
     )
 }
